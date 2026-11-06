@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>51电影院在线观看视频-高清电影免费播放_热门影片在线观看平台</title>
+<meta name="description" content="51电影院在线观看视频提供高清电影免费播放服务，汇集热门影片、经典老片与精选剧集，支持电脑与手机随时在线观看，带来流畅清晰的观影体验。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d1b2a'/%3E%3Crect x='10' y='16' width='44' height='32' rx='5' fill='none' stroke='%23f5a623' stroke-width='3'/%3E%3Cpath d='M27 24l14 8-14 8z' fill='%23f5a623'/%3E%3Ccircle cx='16' cy='22' r='2' fill='%23f5a623'/%3E%3Ccircle cx='16' cy='42' r='2' fill='%23f5a623'/%3E%3Ccircle cx='48' cy='22' r='2' fill='%23f5a623'/%3E%3Ccircle cx='48' cy='42' r='2' fill='%23f5a623'/%3E%3C/svg%3E">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#0b1622;
+--bg2:#101f30;
+--card:#14283c;
+--line:#23374d;
+--gold:#f5a623;
+--gold2:#ffc85c;
+--text:#e8eef5;
+--muted:#93a6b8;
+--radius:14px;
+}
+html{scroll-behavior:smooth}
+body{
+font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.75;
+-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+
+/* 页头 */
+header{
+position:sticky;top:0;z-index:50;
+background:rgba(11,22,34,.92);
+backdrop-filter:blur(10px);
+border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;gap:26px;height:68px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px;letter-spacing:.3px;white-space:nowrap}
+.logo svg{width:30px;height:30px;flex:none}
+.logo .b{color:var(--gold2)}
+.nav-links{display:flex;gap:22px;margin-left:auto;font-size:14.5px;color:var(--muted)}
+.nav-links a{transition:color .2s}
+.nav-links a:hover{color:var(--gold2)}
+.nav-cta{
+margin-left:22px;background:linear-gradient(135deg,var(--gold),#e08e0b);
+color:#1a1206;font-weight:600;font-size:14px;
+padding:9px 18px;border-radius:999px;white-space:nowrap;
+}
+.burger{display:none;margin-left:auto;background:none;border:0;color:var(--text);cursor:pointer}
+
+/* 首屏 */
+.hero{
+position:relative;overflow:hidden;
+padding:64px 0 56px;
+background:
+radial-gradient(900px 380px at 80% -10%,rgba(245,166,35,.16),transparent 60%),
+radial-gradient(700px 420px at 5% 110%,rgba(58,120,190,.22),transparent 65%),
+linear-gradient(180deg,#0b1622,#0d1a28);
+}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.kicker{
+display:inline-flex;align-items:center;gap:8px;
+font-size:13px;color:var(--gold2);
+border:1px solid rgba(245,166,35,.35);
+background:rgba(245,166,35,.08);
+padding:5px 13px;border-radius:999px;margin-bottom:18px;
+}
+h1{
+font-size:clamp(26px,3.4vw,40px);
+line-height:1.3;font-weight:800;letter-spacing:.2px;
+}
+h1 .hl{color:var(--gold2)}
+.hero p.lead{margin-top:16px;color:var(--muted);font-size:15.5px;max-width:36em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.btn{
+display:inline-flex;align-items:center;gap:8px;
+padding:12px 24px;border-radius:10px;font-size:15px;font-weight:600;
+transition:transform .18s,box-shadow .18s;
+}
+.btn-main{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1a1206;box-shadow:0 8px 22px -8px rgba(245,166,35,.7)}
+.btn-main:hover{transform:translateY(-2px)}
+.btn-ghost{border:1px solid var(--line);color:var(--text);background:rgba(255,255,255,.03)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold2)}
+.hero-stats{display:flex;gap:30px;margin-top:32px;flex-wrap:wrap}
+.hero-stats div{font-size:13px;color:var(--muted)}
+.hero-stats strong{display:block;font-size:21px;color:var(--gold2);font-weight:700}
+
+/* 首屏插画 */
+.hero-art{
+background:linear-gradient(160deg,#14283c,#0e1c2b);
+border:1px solid var(--line);border-radius:20px;
+padding:20px;position:relative;
+}
+.hero-art .screen{
+border-radius:12px;overflow:hidden;background:#08111a;
+border:1px solid #1e3247;
+aspect-ratio:16/9;position:relative;
+}
+.hero-art .screen svg{width:100%;height:100%}
+.hero-art .row{display:flex;gap:10px;margin-top:14px}
+.hero-art .chip{
+flex:1;background:#0f2032;border:1px solid #1e3247;border-radius:8px;
+padding:8px 10px;font-size:11.5px;color:var(--muted);text-align:center;
+}
+.hero-art .chip b{color:var(--gold2);display:block;font-size:13px}
+
+/* 通用区块 */
+section{padding:58px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:28px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(20px,2.2vw,26px);font-weight:700}
+.sec-head h2 span{color:var(--gold2)}
+.sec-head p{color:var(--muted);font-size:14px;max-width:52ch}
+.alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+/* 影片卡片 */
+.movies{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.movie{
+background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+overflow:hidden;display:flex;flex-direction:column;
+transition:transform .2s,border-color .2s;
+}
+.movie:hover{transform:translateY(-4px);border-color:rgba(245,166,35,.55)}
+.poster{aspect-ratio:3/4;position:relative;background:#0a141f}
+.poster svg{width:100%;height:100%}
+.poster .tag{
+position:absolute;top:10px;left:10px;
+font-size:11px;background:rgba(11,22,34,.82);
+color:var(--gold2);border:1px solid rgba(245,166,35,.4);
+padding:2px 8px;border-radius:6px;
+}
+.movie-body{padding:13px 14px 16px;display:flex;flex-direction:column;gap:5px;flex:1}
+.movie-body h3{font-size:14.5px;font-weight:600;line-height:1.45}
+.movie-body .meta{font-size:12px;color:var(--muted)}
+.movie-body .play{
+margin-top:auto;padding-top:8px;font-size:13px;color:var(--gold2);font-weight:600;
+display:inline-flex;align-items:center;gap:6px;
+}
+
+/* 分类筛选 */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
+.filters button{
+font-family:inherit;font-size:13.5px;cursor:pointer;
+padding:8px 17px;border-radius:999px;
+border:1px solid var(--line);background:transparent;color:var(--muted);
+transition:.2s;
+}
+.filters button:hover{color:var(--text);border-color:#38536e}
+.filters button.on{background:var(--gold);border-color:var(--gold);color:#1a1206;font-weight:600}
+.searchbar{display:flex;gap:10px;margin-bottom:26px;max-width:520px}
+.searchbar input{
+flex:1;font-family:inherit;font-size:14px;
+padding:11px 16px;border-radius:10px;
+border:1px solid var(--line);background:#0d1a28;color:var(--text);
+outline:none;
+}
+.searchbar input:focus{border-color:var(--gold)}
+.searchbar input::placeholder{color:#5f7488}
+.empty{display:none;color:var(--muted);font-size:14px;padding:26px 0}
+
+/* 内容区：三栏特性 */
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.feature{
+background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+padding:24px 22px;
+}
+.feature .ic{
+width:42px;height:42px;border-radius:10px;
+background:rgba(245,166,35,.12);border:1px solid rgba(245,166,35,.3);
+display:flex;align-items:center;justify-content:center;margin-bottom:16px;
+}
+.feature .ic svg{width:22px;height:22px;stroke:var(--gold2);fill:none;stroke-width:1.7}
+.feature h3{font-size:16px;margin-bottom:8px}
+.feature p{font-size:13.8px;color:var(--muted)}
+
+/* 观影指南：文字+侧栏 */
+.guide{display:grid;grid-template-columns:1.5fr 1fr;gap:38px;align-items:start}
+.prose h2{font-size:clamp(20px,2.2vw,25px);margin-bottom:18px}
+.prose h3{font-size:16px;margin:24px 0 8px;color:var(--gold2)}
+.prose p{font-size:14.6px;color:#c3d1de;margin-bottom:8px}
+.prose ul{margin:6px 0 8px 20px;font-size:14.6px;color:#c3d1de}
+.prose li{margin-bottom:6px}
+.side-card{
+background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+padding:22px;
+}
+.side-card h3{font-size:15px;margin-bottom:14px}
+.side-card ol{list-style:none;counter-reset:r;display:flex;flex-direction:column;gap:12px}
+.side-card ol li{
+counter-increment:r;display:flex;gap:12px;font-size:13.6px;color:var(--muted);
+}
+.side-card ol li::before{
+content:counter(r,decimal-leading-zero);
+font-weight:700;color:var(--gold2);font-size:13px;flex:none;
+}
+.side-card .note{
+margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);
+font-size:13px;color:var(--muted);
+}
+
+/* FAQ */
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.qa{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.qa h3{font-size:15.5px;margin-bottom:8px;color:var(--gold2)}
+.qa p{font-size:14px;color:var(--muted)}
+
+/* 下载条 */
+.download{
+margin:0 auto;max-width:1160px;
+background:linear-gradient(120deg,#172c42,#122234);
+border:1px solid rgba(245,166,35,.32);
+border-radius:18px;padding:34px 32px;
+display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;
+}
+.download h3{font-size:19px;margin-bottom:6px}
+.download p{font-size:13.8px;color:var(--muted);max-width:56ch}
+.dl-btn{
+display:inline-flex;align-items:center;gap:9px;
+padding:12px 26px;border-radius:10px;font-size:15px;font-weight:600;
+background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1a1206;
+pointer-events:none;
+}
+
+/* 页尾 */
+footer{
+border-top:1px solid var(--line);
+background:#08111a;padding:40px 0 26px;margin-top:20px;
+}
+.foot-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-bottom:24px;border-bottom:1px solid #172838}
+.foot-brand{max-width:340px}
+.foot-brand .logo{font-size:15.5px;margin-bottom:12px}
+.foot-brand p{font-size:13px;color:var(--muted)}
+.foot-links{display:flex;gap:56px;flex-wrap:wrap}
+.foot-links div{font-size:13.5px}
+.foot-links b{display:block;color:var(--text);margin-bottom:10px;font-size:13.5px}
+.foot-links a{display:block;color:var(--muted);margin-bottom:7px;transition:color .2s}
+.foot-links a:hover{color:var(--gold2)}
+.copy{padding-top:20px;font-size:12.5px;color:#5f7488;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media(max-width:960px){
+.hero-grid{grid-template-columns:1fr;gap:34px}
+.hero-art{max-width:520px;margin:0 auto;width:100%}
+.movies{grid-template-columns:repeat(2,1fr)}
+.features{grid-template-columns:1fr}
+.guide{grid-template-columns:1fr}
+.faq{grid-template-columns:1fr}
+.nav-links{display:none}
+.burger{display:block}
+.nav-cta{margin-left:0}
+}
+@media(max-width:560px){
+.wrap{padding:0 16px}
+.hero{padding:40px 0 44px}
+section{padding:44px 0}
+.movies{gap:14px}
+.movie-body{padding:11px 11px 13px}
+.hero-stats{gap:20px}
+.download{padding:26px 20px;border-radius:14px}
+.foot-links{gap:32px}
+.searchbar{max-width:100%}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header>
+<div class="wrap nav">
+<a class="logo" href="#top" aria-label="51电影院在线观看视频 首页">
+<svg viewBox="0 0 64 64" aria-hidden="true">
+<rect width="64" height="64" rx="14" fill="#0d1b2a"/>
+<rect x="10" y="16" width="44" height="32" rx="5" fill="none" stroke="#f5a623" stroke-width="3"/>
+<path d="M27 24l14 8-14 8z" fill="#f5a623"/>
+<circle cx="16" cy="22" r="2" fill="#f5a623"/>
+<circle cx="16" cy="42" r="2" fill="#f5a623"/>
+<circle cx="48" cy="22" r="2" fill="#f5a623"/>
+<circle cx="48" cy="42" r="2" fill="#f5a623"/>
+</svg>
+<span>51电影院在线观看视频</span>
+</a>
+<nav class="nav-links" aria-label="主导航">
+<a href="#hot">热门影片</a>
+<a href="#library">影片库</a>
+<a href="#guide">观影指南</a>
+<a href="#faq">常见问题</a>
+</nav>
+<a class="nav-cta" href="#library">立即选片</a>
+<button class="burger" aria-label="展开菜单" onclick="document.getElementById('hot').scrollIntoView()">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+</button>
+</div>
+</header>
+
+<main id="top">
+
+<!-- 首屏 -->
+<section class="hero">
+<div class="wrap hero-grid">
+<div>
+<span class="kicker">高清片源 · 即点即看 · 多端适配</span>
+<h1>51电影院在线观看视频</h1>
+<p class="lead">51电影院在线观看视频把热门新片、经典老片和口碑剧集收进同一个片库。打开页面即可挑片播放，无需注册跳转，电脑、平板与手机都能直接进入观影状态。</p>
+<div class="hero-actions">
+<a class="btn btn-main" href="#library">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+进入影片库
+</a>
+<a class="btn btn-ghost" href="#guide">查看观影指南</a>
+</div>
+<div class="hero-stats">
+<div><strong>4</strong>主要片类板块</div>
+<div><strong>1080P</strong>清晰度支持</div>
+<div><strong>24h</strong>随时可访问</div>
+</div>
+</div>
+
+<div class="hero-art" aria-hidden="true">
+<div class="screen">
+<svg viewBox="0 0 480 270" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#16324b"/>
+<stop offset="1" stop-color="#0a1520"/>
+</linearGradient>
+<linearGradient id="beam" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#f5a623" stop-opacity=".35"/>
+<stop offset="1" stop-color="#f5a623" stop-opacity="0"/>
+</linearGradient>
+</defs>
+<rect width="480" height="270" fill="url(#sky)"/>
+<circle cx="392" cy="58" r="34" fill="#f5a623" opacity=".18"/>
+<circle cx="392" cy="58" r="18" fill="#ffc85c" opacity=".55"/>
+<path d="M0 210 L110 150 L210 196 L320 132 L480 200 L480 270 L0 270 Z" fill="#0e1e2d"/>
+<path d="M0 232 L140 186 L260 226 L400 178 L480 216 L480 270 L0 270 Z" fill="#0a1622"/>
+<rect x="176" y="98" width="128" height="76" rx="8" fill="none" stroke="#f5a623" stroke-width="3" opacity=".85"/>
+<path d="M228 120l34 18-34 18z" fill="#ffc85c"/>
+<rect x="176" y="98" width="128" height="76" rx="8" fill="url(#beam)"/>
+<g fill="#f5a623" opacity=".6">
+<circle cx="188" cy="110" r="3"/><circle cx="188" cy="162" r="3"/>
+<circle cx="292" cy="110" r="3"/><circle cx="292" cy="162" r="3"/>
+</g>
+<g stroke="#2c4a66" stroke-width="1.4" opacity=".8">
+<path d="M24 250h432"/>
+<path d="M60 244v10M100 244v10M140 244v10M180 244v10M220 244v10M260 244v10M300 244v10M340 244v10M380 244v10M420 244v10"/>
+</g>
+</svg>
+</div>
+<div class="row">
+<div class="chip"><b>电影</b>院线热映</div>
+<div class="chip"><b>剧集</b>连更追看</div>
+<div class="chip"><b>纪录</b>精选片单</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 热门影片 -->
+<section id="hot">
+<div class="wrap">
+<div class="sec-head">
+<div>
+<h2>今日<span>热门影片</span></h2>
+<p>按近期点播热度排列，覆盖动作、剧情、科幻与喜剧四类，适合刚进入 51电影院在线观看视频、还没想好看什么的访客。</p>
+</div>
+</div>
+<div class="movies">
+
+<article class="movie">
+<div class="poster">
+<svg viewBox="0 0 300 400" aria-hidden="true">
+<rect width="300" height="400" fill="#122438"/>
+<circle cx="230" cy="82" r="58" fill="#f5a623" opacity=".16"/>
+<path d="M0 300 L90 236 L170 288 L250 220 L300 262 L300 400 L0 400 Z" fill="#0b1a28"/>
+<rect x="86" y="150" width="128" height="78" rx="8" fill="none" stroke="#f5a623" stroke-width="3" opacity=".8"/>
+<path d="M138 174l34 15-34 15z" fill="#ffc85c"/>
+</svg>
+<span class="tag">动作</span>
+</div>
+<div class="movie-body">
+<h3>追击时刻</h3>
+<p class="meta">1080P · 城市追缉题材</p>
+<span class="play">在线观看 →</span>
+</div>
+</article>
+
+<article class="movie">
+<div class="poster">
+<svg viewBox="0 0 300 400" aria-hidden="true">
+<rect width="300" height="400" fill="#101f31"/>
+<circle cx="96" cy="120" r="46" fill="#3a78be" opacity=".22"/>
+<rect x="60" y="196" width="180" height="104" rx="10" fill="#0a1622" stroke="#f5a623" stroke-width="2.5" opacity=".85"/>
+<path d="M128 228h64M128 250h44" stroke="#93a6b8" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+<path d="M0 340 L300 300 L300 400 L0 400 Z" fill="#0b1a28"/>
+</svg>
+<span class="tag">剧情</span>
+</div>
+<div class="movie-body">
+<h3>长夜来信</h3>
+<p class="meta">1080P · 家庭情感题材</p>
+<span class="play">在线观看 →</span>
+</div>
+</article>
+
+<article class="movie">
+<div class="poster">
+<svg viewBox="0 0 300 400" aria-hidden="true">
+<rect width="300" height="400" fill="#0f2133"/>
+<circle cx="150" cy="150" r="66" fill="none" stroke="#f5a623" stroke-width="2.5" opacity=".55"/>
+<circle cx="150" cy="150" r="34" fill="#f5a623" opacity=".2"/>
+<circle cx="150" cy="150" r="12" fill="#ffc85c"/>
+<ellipse cx="150" cy="150" rx="94" ry="26" fill="none" stroke="#6d8aa8" stroke-width="1.6" opacity=".6" transform="rotate(-18 150 150)"/>
+<path d="M0 330 L300 296 L300 400 L0 400 Z" fill="#0b1a28"/>
+</svg>
+<span class="tag">科幻</span>
+</div>
+<div class="movie-body">
+<h3>星轨之外</h3>
+<p class="meta">1080P · 太空探索题材</p>
+<span class="play">在线观看 →</span>
+</div>
+</article>
+
+<article class="movie">
+<div class="poster">
+<svg viewBox="0 0 300 400" aria-hidden="true">
+<rect width="300" height="400" fill="#132639"/>
+<circle cx="150" cy="168" r="58" fill="#f5a623" opacity=".16"/>
+<path d="M112 168a38 38 0 0 1 76 0v10h-76z" fill="#ffc85c" opacity=".75"/>
+<circle cx="132" cy="152" r="6" fill="#0b1622"/>
+<circle cx="168" cy="152" r="6" fill="#0b1622"/>
+<path d="M128 190q22 18 44 0" stroke="#0b1622" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M0 322 L300 288 L300 400 L0 400 Z" fill="#0b1a28"/>
+</svg>
+<span class="tag">喜剧</span>
+</div>
+<div class="movie-body">
+<h3>周末小事</h3>
+<p class="meta">720P · 都市轻喜剧</p>
+<span class="play">在线观看 →</span>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<!-- 影片库 + 筛选 -->
+<section id="library" class="alt">
+<div class="wrap">
+<div class="sec-head">
+<div>
+<h2>影片库<span>分类浏览</span></h2>
+<p>按片类快速缩小范围，也可以在搜索框输入片名关键词。筛选与搜索都在当前页面即时生效，不跳转。</p>
+</div>
+</div>
+
+<div class="searchbar">
+<input id="kw" type="search" placeholder="输入片名关键词，如：星轨" aria-label="搜索片名">
+</div>
+
+<div class="filters" role="group" aria-label="片类筛选">
+<button class="on" data-cat="all">全部</button>
+<button data-cat="动作">动作</button>
+<button data-cat="剧情">剧情</button>
+<button data-cat="科幻">科幻</button>
+<button data-cat="喜剧">喜剧</button>
+</div>
+
+<div class="movies" id="libList">
+<article class="movie" data-cat="动作" data-name="追击时刻">
+<div class="poster"><svg viewBox="0 0 300 400" aria-hidden="true"><rect width="300" height="400" fill="#122438"/><path d="M0 290 L100 226 L180 278 L260 214 L300 252 L300 400 L0 400 Z" fill="#0b1a28"/><rect x="88" y="146" width="124" height="76" rx="8" fill="none" stroke="#f5a623" stroke-width="3" opacity=".8"/><path d="M138 170l32 14-32 14z" fill="#ffc85c"/></svg><span class="tag">动作</span></div>
+<div class="movie-body"><h3>追击时刻</h3><p class="meta">1080P · 城市追缉题材</p><span class="play">在线观看 →</span></div>
+</article>
+<article class="movie" data-cat="剧情" data-name="长夜来信">
+<div class="poster"><svg viewBox="0 0 300 400" aria-hidden="true"><rect width="300" height="400" fill="#101f31"/><circle cx="96" cy="120" r="46" fill="#3a78be" opacity=".22"/><rect x="60" y="196" width="180" height="104" rx="10" fill="#0a1622" stroke="#f5a623" stroke-width="2.5" opacity=".85"/><path d="M128 228h64M128 250h44" stroke="#93a6b8" stroke-width="5" stroke-linecap="round" opacity=".7"/></svg><span class="tag">剧情</span></div>
+<div class="movie-body"><h3>长夜来信</h3><p class="meta">1080P · 家庭情感题材</p><span class="play">在线观看 →</span></div>
+</article>
+<article class="movie" data-cat="科幻" data-name="星轨之外">
+<div class="poster"><svg viewBox="0 0 300 400" aria-hidden="true"><rect width="300" height="400" fill="#0f2133"/><circle cx="150" cy="150" r="66" fill="none" stroke="#f5a623" stroke-width="2.5" opacity=".55"/><circle cx="150" cy="150" r="34" fill="#f5a623" opacity=".2"/><circle cx="150" cy="150" r="12" fill="#ffc85c"/><ellipse cx="150" cy="150" rx="94" ry="26" fill="none" stroke="#6d8aa8" stroke-width="1.6" opacity=".6" transform="rotate(-18 150 150)"/></svg><span class="tag">科幻</span></div>
+<div class="movie-body"><h3>星轨之外</h3><p class="meta">1080P · 太空探索题材</p><span class="play">在线观看 →</span></div>
+</article>
+<article class="movie" data-cat="喜剧" data-name="周末小事">
+<div class="poster"><svg viewBox="0 0 300 400" aria-hidden="true"><rect width="300" height="400" fill="#132639"/><circle cx="150" cy="168" r="58" fill="#f5a623" opacity=".16"/><path d="M112 168a38 38 0 0 1 76 0v10h-76z" fill="#ffc85c" opacity=".75"/><circle cx="132" cy="152" r="6" fill="#0b1622"/><circle cx="168" cy="152" r="6" fill="#0b1622"/><path d="M128 190q22 18 44 0" stroke="#0b1622" stroke-width="5" fill="none" stroke-linecap="round"/></svg><span class="tag">喜剧</span></div>
+<div class="movie-body"><h3>周末小事</h3><p class="meta">720P · 都市轻喜剧</p><span class="play">在线观看 →</span></div>
+</article>
+<article class="movie" data-cat="剧情" data-name="旧站台">
+<div class="poster"><svg viewBox="0 0 300 400" aria-hidden="true"><rect width="300" height="400" fill="#11202f"/><rect x="40" y="210" width="220" height="12" fill="#1e3247"/><path d="M70 210v-70h16v70M120 210v-92h16v92M170 210v-70h16v70" stroke="#f5a623" stroke-width="3" opacity=".7"/><circle cx="232" cy="96" r="26" fill="#ffc85c" opacity=".35"/></svg><span class="tag">剧情</span></div>
+<div class="movie-body"><h3>旧站台</h3><p class="meta">720P · 年代记忆题材</p><span class="play">在线观看 →</span></div>
+</article>
+<article class="movie" data-cat="动作" data-name="逆风航线">
+<div class="poster"><svg viewBox="0 0 300 400" aria-hidden="true"><rect width="300" height="400" fill="#0e1e2e"/><path d="M40 300 L150 120 L260 300 Z" fill="#16324b"/><path d="M150 120 L150 300" stroke="#f5a623" stroke-width="3" opacity=".8"/><path d="M96 258 L204 258" stroke="#f5a623" stroke-width="3" opacity=".5"/><circle cx="150" cy="96" r="16" fill="#ffc85c" opacity=".6"/></svg><span class="tag">动作</span></div>
+<div class="movie-body"><h3>逆风航线</h3><p class="meta">1080P · 高空救援题材</p><span class="play">在线观看 →</span></div>
+</article>
+<article class="movie" data-cat="科幻" data-name="回声协议">
+<div class="poster"><svg viewBox="0 0 300 400" aria-hidden="true"><rect width="300" height="400" fill="#0d1c2b"/><g stroke="#f5a623" stroke-width="2" fill="none" opacity=".6"><circle cx="150" cy="170" r="24"/><circle cx="150" cy="170" r="52"/><circle cx="150" cy="170" r="80"/></g><circle cx="150" cy="170" r="8" fill="#ffc85c"/></svg><span class="tag">科幻</span></div>
+<div class="movie-body"><h3>回声协议</h3><p class="meta">1080P · 人工智能题材</p><span class="play">在线观看 →</span></div>
+</article>
+<article class="movie" data-cat="喜剧" data-name="合租日常">
+<div class="poster"><svg viewBox="0 0 300 400" aria-hidden="true"><rect width="300" height="400" fill="#132538"/><rect x="54" y="160" width="192" height="140" rx="8" fill="#0a1622" stroke="#f5a623" stroke-width="2.5" opacity=".8"/><path d="M54 200h192M120 160v40M180 160v40" stroke="#f5a623" stroke-width="2.5" opacity=".6"/><rect x="82" y="230" width="52" height="52" rx="4" fill="#1e3247"/><rect x="166" y="230" width="52" height="52" rx="4" fill="#1e3247"/></svg><span class="tag">喜剧</span></div>
+<div class="movie-body"><h3>合租日常</h3><p class="meta">720P · 生活情景题材</p><span class="play">在线观看 →</span></div>
+</article>
+</div>
+<p class="empty" id="emptyTip">没有匹配的影片，试试更换关键词或选择“全部”。</p>
+</div>
+</section>
+
+<!-- 平台特点 -->
+<section>
+<div class="wrap">
+<div class="sec-head">
+<div>
+<h2>为什么选择<span>51电影院在线观看视频</span></h2>
+<p>页面围绕“打开就能看”这一件事做取舍，把入口、清晰度和设备适配放在最前。</p>
+</div>
+</div>
+<div class="features">
+<div class="feature">
+<div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H4z"/><path d="M9 20h6M12 16v4"/></svg></div>
+<h3>页面直接播放</h3>
+<p>影片卡片上标注清晰度与题材，点击后进入播放页，无需额外注册或下载客户端，减少中间步骤。</p>
+</div>
+<div class="feature">
+<div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 8l7-5 7 5"/><path d="M4 14h16"/></svg></div>
+<h3>画质分层清楚</h3>
+<p>片库按 720P 与 1080P 标注，网络一般时可选较低清晰度，宽带充足时可切到高清，播放端自适应。</p>
+</div>
+<div class="feature">
+<div class="ic"><svg viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></div>
+<h3>多端一致体验</h3>
+<p>同一页面在电脑、平板与手机上都按视口宽度重排，手机端首屏优先呈现片名与入口，横向不出现滚动。</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 观影指南 -->
+<section id="guide" class="alt">
+<div class="wrap guide">
+<div class="prose">
+<h2>在 51电影院在线观看视频 挑片与观影</h2>
+<p>面对一个片库，真正耗时间的往往不是播放，而是决定看什么。这里给出一条简单的选片路径：先定片类，再看时长，最后按清晰度确认设备是否合适。</p>
+
+<h3>第一步：按片类缩小范围</h3>
+<p>影片库提供动作、剧情、科幻、喜剧四个入口。想放松就先进喜剧，想跟着节奏走就进动作；剧情与科幻更适合整块时间，通常需要连续看完才有完整感受。</p>
+
+<h3>第二步：用关键词定位具体片名</h3>
+<p>已经知道片名时，直接在搜索框输入两三个字即可，列表会即时收窄。搜索只匹配当前页收录的影片，结果为空时页面会给出提示，不会跳转到空白页。</p>
+
+<h3>第三步：确认清晰度与设备</h3>
+<p>手机流量环境下建议先选 720P，接入 Wi-Fi 后再切到 1080P。电脑端画面更大，高清片源的优势更明显；平板介于两者之间，可依电量与网络情况取舍。</p>
+
+<h3>关于片单更新</h3>
+<ul>
+<li>热门影片区按近期点播热度排序，适合没主意时直接点开。</li>
+<li>影片库为固定收录列表，新增影片会同步补充到对应片类。</li>
+<li>分类按钮与搜索框可叠加使用：先选片类，再输入关键词。</li>
+</ul>
+<p>如果只是想随便看看，从热门影片区挑一部开始即可；51电影院在线观看视频 的页面结构把播放入口放在卡片底部，视线从上到下扫过就能完成选择。</p>
+</div>
+
+<aside class="side-card">
+<h3>选片四步清单</h3>
+<ol>
+<li>确定今晚想看动作、剧情、科幻还是喜剧。</li>
+<li>在搜索框输入记得的片名关键词。</li>
+<li>根据网络情况选择 720P 或 1080P。</li>
+<li>点击卡片进入播放页，全屏观看。</li>
+</ol>
+<div class="note">提示：筛选与搜索仅作用于当前页面已展示的影片条目，不会改变片库本身的收录范围。</div>
+</aside>
+</div>
+</section>
+
+<!-- 常见问题 -->
+<section id="faq">
+<div class="wrap">
+<div class="sec-head">
+<div>
+<h2>常见<span>问题</span></h2>
+<p>关于访问方式、播放与片源的常见疑问，集中在这里回答。</p>
+</div>
+</div>
+<div class="faq">
+<div class="qa">
+<h3>需要注册账号才能观看吗？</h3>
+<p>不需要。51电影院在线观看视频的页面以浏览和播放为主，打开影片卡片即可进入播放页，不设强制注册环节。</p>
+</div>
+<div class="qa">
+<h3>手机上能正常播放吗？</h3>
+<p>可以。页面按视口宽度自适应，手机端卡片改为两列排列，导航收起为菜单按钮，播放区域随屏幕宽度缩放。</p>
+</div>
+<div class="qa">
+<h3>搜索不到某部影片怎么办？</h3>
+<p>搜索只覆盖当前页收录的条目。若结果为空，可先点“全部”清除片类限制，再换用更短的关键词重试。</p>
+</div>
+<div class="qa">
+<h3>播放卡顿时怎么处理？</h3>
+<p>先在播放页把清晰度从 1080P 降到 720P，或换到网络更稳定的环境；设备后台程序较多时，关闭部分应用也有帮助。</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 下载入口 -->
+<section style="padding-top:0">
+<div class="download">
+<div>
+<h3>下载客户端，观影入口更顺手</h3>
+<p>客户端提供片库快捷入口与播放记录留存，适合经常在固定设备上观看的用户。安装包与下载地址正在准备中，页面上的按钮暂为占位状态。</p>
+</div>
+<a class="dl-btn" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1" style="pointer-events:none">
+<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M4 20h16"/></svg>
+下载
+</a>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="wrap">
+<div class="foot-top">
+<div class="foot-brand">
+<div class="logo">
+<svg viewBox="0 0 64 64" aria-hidden="true" style="width:26px;height:26px">
+<rect width="64" height="64" rx="14" fill="#0d1b2a"/>
+<rect x="10" y="16" width="44" height="32" rx="5" fill="none" stroke="#f5a623" stroke-width="3"/>
+<path d="M27 24l14 8-14 8z" fill="#f5a623"/>
+</svg>
+<span>51电影院在线观看视频</span>
+</div>
+<p>以清晰的分类、直接的播放入口和完整的页面信息，为访客提供顺畅的在线观影选择路径。</p>
+</div>
+<div class="foot-links">
+<div>
+<b>浏览</b>
+<a href="#hot">热门影片</a>
+<a href="#library">影片库</a>
+<a href="#guide">观影指南</a>
+</div>
+<div>
+<b>帮助</b>
+<a href="#faq">常见问题</a>
+<a href="#guide">选片清单</a>
+<a href="#top">返回顶部</a>
+</div>
+</div>
+</div>
+<div class="copy">
+<span>© 51电影院在线观看视频 · 页面内容仅用于观影信息展示</span>
+<span>桌面与移动端适配 · 高清片源</span>
+</div>
+</div>
+</footer>
+
+<script>
+(function(){
+var btns=document.querySelectorAll('.filters button');
+var cards=document.querySelectorAll('#libList .movie');
+var kw=document.getElementById('kw');
+var empty=document.getElementById('emptyTip');
+var cat='all';
+
+function apply(){
+var q=kw.value.trim().toLowerCase();
+var shown=0;
+cards.forEach(function(c){
+var okCat=(cat==='all'||c.dataset.cat===cat);
+var okKw=(!q||c.dataset.name.toLowerCase().indexOf(q)>-1);
+var ok=okCat&&okKw;
+c.style.display=ok?'':'none';
+if(ok)shown++;
+});
+empty.style.display=shown===0?'block':'none';
+}
+
+btns.forEach(function(b){
+b.addEventListener('click',function(){
+btns.forEach(function(x){x.classList.remove('on')});
+b.classList.add('on');
+cat=b.dataset.cat;
+apply();
+});
+});
+kw.addEventListener('input',apply);
+apply();
+})();
+</script>
+</body>
+  </html>
