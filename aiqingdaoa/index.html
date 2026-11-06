@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>爱情岛aqdlt-爱情岛aqdlt社区动态_爱情岛aqdlt热点内容</title>
+<meta name="description" content="爱情岛aqdlt是一个聚焦网络热点与社区动态的资讯入口，聚合热门话题、网友讨论与内容精选，帮助访问者快速浏览爱情岛aqdlt上的新鲜内容与社区氛围。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23ff5a7a'/%3E%3Cpath d='M32 48s-14-8.6-14-18a7.6 7.6 0 0 1 14-4 7.6 7.6 0 0 1 14 4c0 9.4-14 18-14 18z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{
+  --pink:#ff5a7a;
+  --pink-deep:#e8405f;
+  --pink-soft:#ffe6ec;
+  --ink:#231a1d;
+  --ink-2:#5c4d51;
+  --line:#f0dfe3;
+  --bg:#fffafb;
+  --card:#ffffff;
+  --sand:#fff3f5;
+  --radius:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+
+/* header */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,250,251,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:.5px;color:var(--ink)}
+.logo .mark{
+  width:38px;height:38px;border-radius:12px;flex:0 0 auto;
+  background:linear-gradient(140deg,var(--pink),#ff9a6c);
+  display:grid;place-items:center;box-shadow:0 6px 16px rgba(255,90,122,.32);
+}
+.logo .mark svg{width:22px;height:22px}
+.navlinks{display:flex;gap:26px;font-size:15px;color:var(--ink-2);font-weight:500}
+.navlinks a{position:relative;padding:4px 0;transition:color .2s}
+.navlinks a:hover{color:var(--pink-deep)}
+.navlinks a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--pink);transition:width .25s;border-radius:2px}
+.navlinks a:hover::after{width:100%}
+.nav-cta{
+  background:var(--pink);color:#fff;font-size:14px;font-weight:600;
+  padding:9px 18px;border-radius:999px;white-space:nowrap;
+  box-shadow:0 6px 16px rgba(255,90,122,.3);
+  transition:transform .2s,background .2s;
+}
+.nav-cta:hover{background:var(--pink-deep);transform:translateY(-1px)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:10px;padding:8px;cursor:pointer}
+
+/* hero */
+.hero{padding:56px 0 44px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.badge{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--pink-soft);color:var(--pink-deep);
+  font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;margin-bottom:20px;
+}
+.badge .dot{width:7px;height:7px;border-radius:50%;background:var(--pink);animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+h1{
+  font-size:clamp(30px,4.4vw,50px);
+  line-height:1.18;font-weight:800;letter-spacing:-.5px;
+}
+h1 .hl{
+  background:linear-gradient(180deg,transparent 62%,#ffd3dc 62%);
+  padding:0 4px;
+}
+.hero p.lead{margin-top:20px;font-size:16.5px;color:var(--ink-2);max-width:40em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 26px;border-radius:999px;font-size:15px;font-weight:600;
+  transition:transform .2s,box-shadow .2s,background .2s;
+}
+.btn-primary{background:var(--pink);color:#fff;box-shadow:0 10px 24px rgba(255,90,122,.34)}
+.btn-primary:hover{background:var(--pink-deep);transform:translateY(-2px)}
+.btn-ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn-ghost:hover{border-color:var(--pink);color:var(--pink-deep)}
+.btn[aria-disabled="true"]{opacity:.7;cursor:default;pointer-events:none}
+.hero-stats{display:flex;gap:34px;margin-top:36px;flex-wrap:wrap}
+.hero-stats div strong{display:block;font-size:23px;color:var(--pink-deep);font-weight:800;line-height:1.3}
+.hero-stats div span{font-size:13px;color:var(--ink-2)}
+
+/* hero visual */
+.hero-art{
+  position:relative;border-radius:26px;padding:26px;
+  background:linear-gradient(160deg,#fff0f3,#ffe0e7 60%,#ffd0da);
+  border:1px solid #ffdbe3;
+  box-shadow:0 24px 60px rgba(255,90,122,.16);
+}
+.hero-art .island{width:100%;height:auto}
+.float-card{
+  position:absolute;background:#fff;border-radius:14px;padding:10px 14px;
+  font-size:12.5px;font-weight:600;color:var(--ink);
+  box-shadow:0 10px 26px rgba(180,60,90,.16);
+  display:flex;align-items:center;gap:8px;
+}
+.float-card i{width:8px;height:8px;border-radius:50%;background:var(--pink);display:inline-block}
+.fc1{top:14px;right:-10px}
+.fc2{bottom:22px;left:-16px}
+
+/* section shell */
+section{padding:54px 0}
+.sec-head{max-width:640px;margin-bottom:34px}
+.sec-kicker{font-size:13px;font-weight:700;letter-spacing:2px;color:var(--pink-deep);text-transform:uppercase}
+.sec-head h2{font-size:clamp(22px,2.8vw,30px);font-weight:800;margin-top:10px;line-height:1.3}
+.sec-head p{margin-top:12px;color:var(--ink-2);font-size:15.5px}
+
+/* topic cards */
+.topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 24px;transition:transform .22s,box-shadow .22s,border-color .22s;
+  display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(200,90,120,.12);border-color:#ffc9d4}
+.card .ico{
+  width:44px;height:44px;border-radius:12px;background:var(--sand);
+  display:grid;place-items:center;margin-bottom:16px;color:var(--pink-deep);
+}
+.card .ico svg{width:22px;height:22px}
+.card h3{font-size:17.5px;font-weight:700;margin-bottom:9px}
+.card p{font-size:14.5px;color:var(--ink-2);flex:1}
+.card .meta{margin-top:16px;font-size:12.5px;color:#a08d92;display:flex;gap:12px}
+
+/* feed list */
+.feed{display:grid;grid-template-columns:1.4fr .6fr;gap:34px;align-items:start}
+.feed-list{display:flex;flex-direction:column;gap:16px}
+.feed-item{
+  background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:20px 22px;display:flex;gap:18px;align-items:flex-start;
+  transition:border-color .2s,box-shadow .2s;
+}
+.feed-item:hover{border-color:#ffc9d4;box-shadow:0 10px 26px rgba(200,90,120,.08)}
+.feed-item .idx{
+  font-size:15px;font-weight:800;color:var(--pink);flex:0 0 auto;
+  width:30px;line-height:1.9;
+}
+.feed-item h3{font-size:16px;font-weight:700;margin-bottom:6px}
+.feed-item p{font-size:14px;color:var(--ink-2)}
+.feed-item .tag{
+  display:inline-block;margin-top:10px;font-size:12px;color:var(--pink-deep);
+  background:var(--pink-soft);padding:2px 10px;border-radius:999px;font-weight:600;
+}
+.aside{display:flex;flex-direction:column;gap:18px}
+.panel{background:linear-gradient(160deg,#fff6f8,#ffe9ee);border:1px solid #ffdbe3;border-radius:var(--radius);padding:24px}
+.panel h3{font-size:16px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.panel ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.panel li{font-size:14px;color:var(--ink-2);padding-left:16px;position:relative}
+.panel li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--pink)}
+.panel .note{font-size:13px;color:#9c858b;margin-top:16px;padding-top:14px;border-top:1px dashed #ffc9d4}
+
+/* about / prose */
+.about{background:var(--sand);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.about h2{font-size:clamp(22px,2.8vw,28px);font-weight:800;margin-bottom:16px}
+.about p{font-size:15px;color:var(--ink-2);margin-bottom:14px}
+.about p strong{color:var(--ink);font-weight:700}
+.factlist{display:grid;gap:14px;margin-top:8px}
+.fact{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.fact dt{font-size:13px;font-weight:700;color:var(--pink-deep);margin-bottom:4px}
+.fact dd{font-size:14px;color:var(--ink-2)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
+.step{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 24px;position:relative;
+}
+.step::before{
+  counter-increment:s;content:"0" counter(s);
+  font-size:32px;font-weight:800;color:#ffd3dc;line-height:1;
+}
+.step h3{font-size:16.5px;font-weight:700;margin:10px 0 8px}
+.step p{font-size:14.5px;color:var(--ink-2)}
+
+/* faq */
+.faq-list{display:flex;flex-direction:column;gap:14px;max-width:860px}
+details{
+  background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 22px;
+  transition:border-color .2s;
+}
+details[open]{border-color:#ffc9d4}
+summary{
+  cursor:pointer;font-size:15.5px;font-weight:700;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:20px;color:var(--pink);font-weight:400;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin-top:12px;font-size:14.5px;color:var(--ink-2)}
+
+/* footer */
+footer{background:#2a1e22;color:#e8d9dd;padding:46px 0 30px;margin-top:10px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
+footer .logo{color:#fff;font-size:17px}
+footer .logo .mark{box-shadow:none}
+footer p{font-size:13.5px;color:#b8a3a9;margin-top:14px;line-height:1.7}
+.foot-col h4{font-size:14px;font-weight:700;color:#fff;margin-bottom:14px}
+.foot-col a{display:block;font-size:13.5px;color:#b8a3a9;margin-bottom:9px;transition:color .2s}
+.foot-col a:hover{color:var(--pink)}
+.copyright{
+  margin-top:36px;padding-top:20px;border-top:1px solid #3d2e33;
+  font-size:12.5px;color:#8d787e;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+}
+
+/* responsive */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .hero-art{order:-1;max-width:460px;margin:0 auto}
+  .topic-grid{grid-template-columns:1fr 1fr}
+  .feed{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){
+  .navlinks{display:none}
+  .menu-btn{display:block}
+  .nav-cta{display:none}
+  .hero{padding:34px 0 30px}
+  .hero-stats{gap:22px}
+  .topic-grid{grid-template-columns:1fr}
+  section{padding:40px 0}
+  .foot-grid{grid-template-columns:1fr}
+  .fc1{right:0}
+  .fc2{left:0}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="爱情岛aqdlt 首页">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 20s-7-4.3-7-9a3.8 3.8 0 0 1 7-2 3.8 3.8 0 0 1 7 2c0 4.7-7 9-7 9z"/>
+        </svg>
+      </span>
+      爱情岛aqdlt
+    </a>
+    <nav class="navlinks" aria-label="主导航">
+      <a href="#topics">热门话题</a>
+      <a href="#feed">社区动态</a>
+      <a href="#about">站点说明</a>
+      <a href="#faq">常见问答</a>
+    </nav>
+    <a class="nav-cta" href="#feed">浏览最新动态</a>
+    <button class="menu-btn" aria-label="展开导航" onclick="document.querySelector('.navlinks').style.display=document.querySelector('.navlinks').style.display==='flex'?'none':'flex'">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#231a1d" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="badge"><span class="dot"></span>社区热点 · 每日更新</span>
+        <h1>爱情岛aqdlt</h1>
+        <p class="lead">爱情岛aqdlt 是一个聚合网络热点与社区讨论的浏览入口。这里把零散的话题线索整理成清晰的栏目，让你在一屏之内看清当前大家在聊什么、哪些内容值得点开细读。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#feed">
+            查看社区动态
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#topics">先看热门话题</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>4</strong><span>主题栏目</span></div>
+          <div><strong>12</strong><span>条动态摘要</span></div>
+          <div><strong>1</strong><span>站内入口</span></div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="float-card fc1"><i></i>热点聚焦</div>
+        <svg class="island" viewBox="0 0 420 340" role="img" aria-label="爱情岛主题插画：小岛、爱心与对话气泡">
+          <defs>
+            <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#ffd0da"/>
+              <stop offset="1" stop-color="#ffb6c6"/>
+            </linearGradient>
+            <linearGradient id="hill" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ff8fa6"/>
+              <stop offset="1" stop-color="#ff5a7a"/>
+            </linearGradient>
+          </defs>
+          <ellipse cx="210" cy="292" rx="180" ry="26" fill="url(#sea)"/>
+          <path d="M60 268c38-58 84-92 150-92s112 34 150 92z" fill="#fff" opacity=".65"/>
+          <path d="M110 262c26-44 58-70 100-70s74 26 100 70z" fill="url(#hill)"/>
+          <path d="M210 168c-22-26-58-20-58 10 0 26 34 46 58 64 24-18 58-38 58-64 0-30-36-36-58-10z" fill="#fff"/>
+          <circle cx="150" cy="96" r="9" fill="#fff" opacity=".9"/>
+          <circle cx="270" cy="76" r="6" fill="#fff" opacity=".8"/>
+          <rect x="252" y="112" width="96" height="58" rx="16" fill="#fff" opacity=".92"/>
+          <path d="M276 170l-8 16 22-16z" fill="#fff" opacity=".92"/>
+          <rect x="268" y="128" width="52" height="7" rx="3.5" fill="#ffc9d4"/>
+          <rect x="268" y="143" width="34" height="7" rx="3.5" fill="#ffdbe3"/>
+          <rect x="72" y="140" width="78" height="46" rx="14" fill="#fff" opacity=".85"/>
+          <rect x="88" y="154" width="40" height="6" rx="3" fill="#ffc9d4"/>
+          <rect x="88" y="166" width="26" height="6" rx="3" fill="#ffdbe3"/>
+        </svg>
+        <div class="float-card fc2"><i></i>讨论聚合</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOPICS -->
+  <section id="topics">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-kicker">Topics</span>
+        <h2>爱情岛aqdlt 的热门话题分区</h2>
+        <p>按内容性质把社区话题拆成几个方向，方便你从感兴趣的角度切入，而不是在信息流里盲目下拉。</p>
+      </div>
+      <div class="topic-grid">
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8z"/></svg>
+          </div>
+          <h3>热点聚焦</h3>
+          <p>收录近期关注度上升的话题线索，把事件背景、讨论焦点与网友争议点分条列出，帮助你在进入讨论前先建立基本判断。</p>
+          <div class="meta"><span>话题线索</span><span>持续补充</span></div>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 21 12z"/></svg>
+          </div>
+          <h3>社区讨论</h3>
+          <p>汇总不同立场的发言与回应，保留讨论的原始层次。爱情岛aqdlt 更关注观点如何形成，而不是只给出一个结论。</p>
+          <div class="meta"><span>观点汇总</span><span>多角度</span></div>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16M4 12h10M4 19h13"/></svg>
+          </div>
+          <h3>内容精选</h3>
+          <p>从较长篇幅的帖子中提炼关键段落，配上阅读提示与背景说明，让一次浏览就能掌握大致脉络，减少重复翻找。</p>
+          <div class="meta"><span>精读摘要</span><span>结构清晰</span></div>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </div>
+          <h3>更新节奏</h3>
+          <p>按时间段整理内容变化，标注哪些话题仍在升温、哪些已经趋于平静，方便你决定此刻是否值得花时间阅读。</p>
+          <div class="meta"><span>时间线索</span><span>动态观察</span></div>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>
+          </div>
+          <h3>浏览提示</h3>
+          <p>提醒阅读时留意信息来源与发布时间，对未经确认的说法保持审慎。爱情岛aqdlt 呈现的是讨论现场，而非最终定论。</p>
+          <div class="meta"><span>阅读习惯</span><span>理性判断</span></div>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>
+          </div>
+          <h3>热度观察</h3>
+          <p>用简单的排序与标签说明话题相对位置，不虚构具体数字，只呈现编辑整理时的关注顺序，供你参考取舍。</p>
+          <div class="meta"><span>相对排序</span><span>非精确统计</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEED -->
+  <section id="feed" style="background:linear-gradient(180deg,#fffafb,#fff3f5)">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-kicker">Feed</span>
+        <h2>爱情岛aqdlt 社区动态摘要</h2>
+        <p>下面这些条目是编辑整理出的内容线索，每条都说明它为什么值得一读，以及阅读时可以先关注什么。</p>
+      </div>
+      <div class="feed">
+        <div class="feed-list">
+          <article class="feed-item">
+            <span class="idx">01</span>
+            <div>
+              <h3>话题从哪里开始发酵</h3>
+              <p>很多讨论并非同时出现，而是由一条短帖带动。理清起点，能判断后续发言是在补充信息，还是仅仅情绪跟帖。</p>
+              <span class="tag">起点梳理</span>
+            </div>
+          </article>
+          <article class="feed-item">
+            <span class="idx">02</span>
+            <div>
+              <h3>同一件事的两种说法</h3>
+              <p>当社区出现明显分歧时，把双方的核心论点并列放置，比只看单边叙述更容易看清争议真正落在哪一步。</p>
+              <span class="tag">观点对照</span>
+            </div>
+          </article>
+          <article class="feed-item">
+            <span class="idx">03</span>
+            <div>
+              <h3>长帖里的关键段落</h3>
+              <p>篇幅较长的内容往往信息密度不均。摘要会标出转折处与结论句，让快速浏览也能抓住作者真正想表达的部分。</p>
+              <span class="tag">精读摘要</span>
+            </div>
+          </article>
+          <article class="feed-item">
+            <span class="idx">04</span>
+            <div>
+              <h3>评论区里的补充信息</h3>
+              <p>不少有价值的细节出现在回复中。爱情岛aqdlt 会把有实质补充的回复单独列出，而不是让它们淹没在楼层里。</p>
+              <span class="tag">回复精选</span>
+            </div>
+          </article>
+          <article class="feed-item">
+            <span class="idx">05</span>
+            <div>
+              <h3>热度回落的信号</h3>
+              <p>当新增发言减少、重复内容增多，通常意味着话题进入尾声。识别这个节点，可以避免把时间花在重复阅读上。</p>
+              <span class="tag">节奏判断</span>
+            </div>
+          </article>
+          <article class="feed-item">
+            <span class="idx">06</span>
+            <div>
+              <h3>怎样收藏值得回看的内容</h3>
+              <p>建议把有事实价值的段落记录来源与时间，方便日后核对。社区内容变化快，保留原始线索比记住结论更可靠。</p>
+              <span class="tag">阅读方法</span>
+            </div>
+          </article>
+        </div>
+        <aside class="aside">
+          <div class="panel">
+            <h3>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e8405f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8z"/></svg>
+              本期看点
+            </h3>
+            <ul>
+              <li>话题起点与扩散路径</li>
+              <li>分歧双方的核心论点</li>
+              <li>长帖中的转折与结论</li>
+              <li>评论区的高价值补充</li>
+            </ul>
+            <p class="note">以上为编辑整理时的观察顺序，非平台统计数据。</p>
+          </div>
+          <div class="panel" style="background:linear-gradient(160deg,#fff,#fff6f8)">
+            <h3>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e8405f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18"/></svg>
+              站内入口
+            </h3>
+            <ul>
+              <li><a href="#topics">热门话题分区</a></li>
+              <li><a href="#about">站点说明</a></li>
+              <li><a href="#faq">常见问答</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="wrap about-grid">
+      <div>
+        <span class="sec-kicker">About</span>
+        <h2 style="margin-top:10px">关于爱情岛aqdlt 这个入口</h2>
+        <p><strong>爱情岛aqdlt</strong> 的定位是内容浏览与线索整理，而不是发布结论。社区里的讨论往往在短时间内迅速变化，同一件事可能早上和晚上就有不同说法，因此这里更重视呈现过程：谁先提出、哪些人回应、争议卡在哪里。</p>
+        <p>我们把内容按主题拆分，是为了让访问者可以带着目的进入。想快速了解概况的人可以先看摘要，愿意深读的人再顺着条目回到原帖。这样既节省时间，也保留了自己判断的空间。</p>
+        <p>需要说明的是，页面中的排序与标签反映的是编辑整理时的关注顺序，不代表精确的统计数字；涉及具体事实的部分，均以原帖与公开信息为准，本站不做额外推断。</p>
+      </div>
+      <div>
+        <dl class="factlist">
+          <div class="fact">
+            <dt>内容方向</dt>
+            <dd>网络热点、社区讨论与内容精选，围绕同一主题展开。</dd>
+          </div>
+          <div class="fact">
+            <dt>组织方式</dt>
+            <dd>话题分区、动态摘要、阅读提示三层结构，逐层细化。</dd>
+          </div>
+          <div class="fact">
+            <dt>更新状态</dt>
+            <dd>栏目与条目随讨论变化补充，页面本身保持静态可读。</dd>
+          </div>
+          <div class="fact">
+            <dt>阅读建议</dt>
+            <dd>先看摘要判断相关性，再决定是否深入原文与评论区。</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-kicker">How to read</span>
+        <h2>三步读完爱情岛aqdlt 的一页内容</h2>
+        <p>面对信息密集的社区页面，先建立顺序比逐条硬读更有效。下面是一个简单的浏览路径。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>先扫话题标题</h3>
+          <p>用十几秒看完整页分区标题，判断哪一类与你的兴趣相关，其余部分可以直接跳过，避免一开始就陷入细节。</p>
+        </div>
+        <div class="step">
+          <h3>再读动态摘要</h3>
+          <p>摘要条目通常包含结论性的一句话。挑两三条细读，就能大致掌握当前讨论的重心与分歧所在。</p>
+        </div>
+        <div class="step">
+          <h3>最后回到原帖</h3>
+          <p>如果某条线索对你有实际价值，再顺着来源去看原文。此时你已经带着问题进入，阅读效率会明显提高。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="background:var(--sand);border-top:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-kicker">FAQ</span>
+        <h2>关于爱情岛aqdlt 的常见问题</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>爱情岛aqdlt 主要提供什么内容？</summary>
+          <p>它以浏览与整理为主，把社区中分散的热点话题、讨论观点和长帖要点归纳成栏目与摘要，方便快速了解当前内容概况，而不是提供单一结论。</p>
+        </details>
+        <details>
+          <summary>页面上的排序是平台统计吗？</summary>
+          <p>不是。页面中的顺序与标签反映编辑整理时的关注顺序，用于帮助读者取舍，并不代表精确的访问量或热度数值。</p>
+        </details>
+        <details>
+          <summary>看到的内容与原文不一致怎么办？</summary>
+          <p>摘要只是对原帖的提炼，可能省略细节。涉及具体事实时，建议回到原帖与评论区核对，并以公开信息为准。</p>
+        </details>
+        <details>
+          <summary>如何找到自己感兴趣的分区？</summary>
+          <p>可先通过顶部导航进入热门话题或社区动态，再根据卡片标题定位方向。每个分区都有独立说明，帮助你判断是否继续阅读。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="#top">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20s-7-4.3-7-9a3.8 3.8 0 0 1 7-2 3.8 3.8 0 0 1 7 2c0 4.7-7 9-7 9z"/>
+            </svg>
+          </span>
+          爱情岛aqdlt
+        </a>
+        <p>爱情岛aqdlt 聚焦网络热点与社区讨论的整理与呈现，帮助访问者按自己的节奏了解当前内容概况。</p>
+      </div>
+      <div class="foot-col">
+        <h4>页面导航</h4>
+        <a href="#topics">热门话题</a>
+        <a href="#feed">社区动态</a>
+        <a href="#about">站点说明</a>
+        <a href="#faq">常见问答</a>
+      </div>
+      <div class="foot-col">
+        <h4>阅读提示</h4>
+        <a href="#about">内容组织方式</a>
+        <a href="#faq">排序说明</a>
+        <a href="#faq">信息核对建议</a>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2025 爱情岛aqdlt · 内容浏览入口</span>
+      <span>页面内容基于编辑整理，具体事实以原帖与公开信息为准。</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+        </html>
